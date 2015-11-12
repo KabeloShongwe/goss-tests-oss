@@ -1,0 +1,24 @@
+{
+    "command": {
+        "curl http://localhost:5601": {
+            "exit-status": "0",
+            "stdout": ["KIBANA_VERSION"],
+            "stderr": [] 
+        },
+        "curl http://localhost:9200": {
+            "exit-status": "0",
+            "stdout": ["cluster_name"],
+            "stderr": [] 
+        },
+        "lsof -i | grep 5601": {
+            "exit-status": "0",
+            "stdout": [],
+            "stderr": []
+        },
+        "lsof -i | grep 9200": {
+            "exit-status": "0",
+            "stdout": [],
+            "stderr": []
+        }
+    }
+}

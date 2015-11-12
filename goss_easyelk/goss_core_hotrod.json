@@ -1,0 +1,12 @@
+{
+  "command": {
+    "docker ps --filter status=running --format '{{.Names}}'": {
+      "exit-status": "0",
+      "stdout": [
+        "weaveproxy",
+        "/_hotrodctl_\\d/"
+      ],
+      "stderr": []
+    }
+  }
+}
