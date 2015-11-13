@@ -1,0 +1,14 @@
+{
+  "command": {
+"docker exec `docker ps --filter status=running --filter name=_rsyslog_ -q` ping -c 2 elasticsearch": {
+      "exit-status": "0",
+      "stdout": [],
+      "stderr": []
+    },
+    "docker exec `docker ps --filter status=running --filter name=_kibana_ -q` ping -c 2 elasticsearch": {
+      "exit-status": "0",
+      "stdout": [],
+      "stderr": []
+    }
+  }
+}  
