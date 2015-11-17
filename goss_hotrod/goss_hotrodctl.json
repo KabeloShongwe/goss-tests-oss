@@ -1,0 +1,78 @@
+{
+    "command": {
+        "hotrodctl restart": {
+            "exit-status": "0",
+            "stdout": [ 
+               "Restart container...", 
+               "hotrod_rsyslog_1",
+               "hotrod_kibana_1",
+               "hotrod_hotrodctl_1",
+               "hotrod_elasticsearch_1"
+             ],
+            "stderr": []
+        },
+        "sleep 30": {
+            "exit-status": "0",
+            "stdout": [],
+            "stderr": []
+        },
+        "hotrodctl restart rsyslog": {
+            "exit-status": "0",
+            "stdout": [
+               "Restart container...",
+               "hotrod_rsyslog_1"
+            ],
+            "stderr": []
+        },
+        "hotrodctl enter kibana hostname": {
+            "exit-status": "0",
+            "stdout": [
+               "kibana"
+            ],
+            "stderr": []
+        },
+        "hotrodctl stop": {
+            "exit-status": "0",
+            "stdout": [
+               "Stop hotrodctl...", 
+               "hotrod_hotrodctl_1",
+               "Stop hotrod containers...",
+               "hotrod_rsyslog_1",
+               "hotrod_kibana_1",
+               "hotrod_elasticsearch_1"
+              ],
+            "stderr": []
+        },
+        "sleep 30": {
+            "exit-status": "0",
+            "stdout": [],
+            "stderr": []
+        },
+        "docker ps --filter status=running --format '{{.Names}}'": {
+            "exit-status": "0",
+            "stdout": [
+               "!/_kibana_\\d/"
+              ],
+            "stderr": []
+        },
+        "hotrodctl start": {
+            "exit-status": "0",
+            "stdout": [
+               "hotrod_hotrodctl_1"
+              ],
+            "stderr": []
+        },
+        "sleep 30": {
+            "exit-status": "0",
+            "stdout": [],
+            "stderr": []
+        },
+        "docker ps --filter status=running --format '{{.Names}}'": {
+            "exit-status": "0",
+            "stdout": [
+               "/_kibana_\\d/"
+              ],
+            "stderr": []
+        }
+    }
+}
