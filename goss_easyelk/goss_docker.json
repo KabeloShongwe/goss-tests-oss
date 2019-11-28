@@ -2,7 +2,7 @@
     "command": {
         "docker --version": {
             "exit-status": "0",
-            "stdout": ["Docker version 1.9.0"],
+            "stdout": ["Docker version 1.9.1"],
             "stderr": []
         }
     }
